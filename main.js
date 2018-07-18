@@ -4,5 +4,9 @@ for (var i = 0; i < 120; ++i) {
 }
 
 function fizzBuzz(number) {
-    return number.toString();
+    let result = number.toString();
+    if (number % 3 === 0) {
+        result = "Fizz";
+    }
+    return result;
 }

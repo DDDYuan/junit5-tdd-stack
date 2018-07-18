@@ -11,5 +11,8 @@ function fizzBuzz(number) {
     if (number % 5 === 0) {
         result += "Buzz";
     }
+    if (number % 7 === 0) {
+        result += "Whizz";
+    }
     return result ? result : number.toString();
 }

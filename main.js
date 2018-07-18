@@ -4,15 +4,23 @@ for (var i = 0; i < 120; ++i) {
 }
 
 function fizzBuzz(number) {
+    const divisors = [{
+        number: 3,
+        str: "Fizz"
+    }, {
+        number: 5,
+        str: "Buzz"
+    }, {
+        number: 7,
+        str: "Whizz"
+    }];
+
     let result = '';
-    if (number % 3 === 0) {
-        result += "Fizz";
-    }
-    if (number % 5 === 0) {
-        result += "Buzz";
-    }
-    if (number % 7 === 0) {
-        result += "Whizz";
-    }
+
+    divisors.forEach(divisor => {
+        if (number % divisor.number === 0) {
+            result = result.concat(divisor.str);
+        }
+    })
     return result ? result : number.toString();
 }
